@@ -6,6 +6,20 @@
 
 body {
   font-family: "Montserrat", serif;
+  position: relative;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 /*# sourceMappingURL=index.css.map */
