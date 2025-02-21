@@ -1,6 +1,6 @@
 import React from "react";
 import s from './Day.module.css'
-import sun from '../../../../assets/sun.svg'
+import sun from '../../../../assets/image/sun.svg'
 
 const Day: React.FC = () => {
     return (

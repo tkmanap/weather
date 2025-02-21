@@ -1,8 +1,8 @@
 import React from 'react';
 import {Link} from "react-router";
 import s from './Header.module.scss'
-import logo from '../../assets/logo.png'
-import theme from '../../assets/theme.svg'
+import logo from '../../assets/image/logo.png'
+import theme from '../../assets/image/theme.svg'
 
 const Header: React.FC = () => {
     return (

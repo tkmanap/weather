@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":[],"names":[],"mappings":"","file":"DayInfo.module.css"}
+{"version":3,"sourceRoot":"","sources":["../../../../styles/variables.scss","DayInfo.module.scss"],"names":[],"mappings":"AAqBA;EAEE;EACA;EACA;EAGA;EACA;EACA;EAGA;EACA;EACA;EAGA;EACA;EACA;EAGA;EACA;EACA;;;AC3CF;EACE;EACA;EACA;EACA;EACA,YDLW;ECMX,eDLc;ECMd;;;AAGF;EACE;EACA;EACA;EACA;;AACA;EACE;;AAEF;AAAA;EAEE;;AAGF;EACE;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;AAGF;AAAA;EAEE;;AAEF;EACE,ODlCS;;ACoCX;EACE","file":"DayInfo.module.css"}

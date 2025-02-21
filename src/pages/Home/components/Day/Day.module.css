@@ -1,3 +1,21 @@
+:root {
+  --body-background-dark: #0d1117;
+  --body-background-light: #fff;
+  --body-background-default: var(--body-background-light);
+  --components-background-dark: #4f4f4f;
+  --components-background-light: #fff;
+  --components-background-default: var(--components-background-light);
+  --card-background-dark: #2e3035;
+  --card-background-light: rgba(71, 147, 255, 0.2);
+  --card-background-default: var(--card-background-light);
+  --card-shadow-dark: 0px 3px 20px rgba(5, 5, 5, 0.28);
+  --card-shadow-light: 0px 3px 20px rgba(147, 144, 144, 0.28);
+  --card-shadow-default: var(--card-shadow-light);
+  --text-color-dark: #fff;
+  --text-color-light: #000;
+  --text-color-default: var(--text-color-light);
+}
+
 .today {
   padding: 20px;
   max-width: 400px;
@@ -30,7 +48,7 @@
 
 .today__bottom .today__time,
 .today__bottom .today__place {
-  color: #939CB0;
+  color: #939cb0;
   font-size: 25px;
 }
 
