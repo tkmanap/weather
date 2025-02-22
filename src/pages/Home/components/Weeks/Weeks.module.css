@@ -22,7 +22,7 @@
   flex-wrap: wrap;
   padding: 20px;
   width: 100%;
-  background: #fff;
+  background-color: var(--components-background-default);
   box-shadow: 2px 5px 25px -3px rgba(180, 180, 180, 0.25);
   border-radius: 0 0 20px 20px;
 }
@@ -30,16 +30,17 @@
 .card {
   display: flex;
   flex-direction: column;
-  background: rgba(71, 147, 255, 0.2);
   border-radius: 10px;
   padding: 10px;
   width: 149px;
   transition: 0.3ms;
   cursor: pointer;
+  background-color: var(--card-background-default);
 }
 .card .day__weeks {
   margin-bottom: 7px;
   font-size: 18px;
+  color: var(--text-color-default);
 }
 .card .day__info {
   font-size: 14px;
@@ -51,6 +52,7 @@
 }
 .card .temp__day {
   font-size: 18px;
+  color: var(--text-color-default);
 }
 .card .temp__night {
   font-size: 13px;
@@ -63,7 +65,7 @@
   margin-bottom: 13px;
 }
 .card:hover {
-  box-shadow: 0 3px 20px rgba(147, 144, 144, 0.28);
+  box-shadow: var(--card-shadow-default);
 }
 
 .tabs {

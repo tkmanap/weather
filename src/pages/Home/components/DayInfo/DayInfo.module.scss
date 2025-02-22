@@ -15,9 +15,11 @@
   display: flex;
   align-items: center;
   margin-bottom: 25px;
+
   &:last-of-type {
     margin-bottom: 0;
   }
+
   .indicator,
   .indicator__name {
     margin-right: 20px;
@@ -38,9 +40,11 @@
   .indicator__value {
     font-size: 14px;
   }
+
   .indicator__name {
     color: $base-color;
   }
+
   .indicator__value {
     color: var(#{--text-color-default});
   }

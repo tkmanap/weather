@@ -4,9 +4,9 @@
   padding: 20px;
   max-width: 400px;
   width: 100%;
-  background: $light-background;
   box-shadow: $box-shadow;
   border-radius: $border-radius;
+  background-color: var(#{--card-background-default});
 }
 
 .today__top{
@@ -15,6 +15,7 @@
   width: 100%;
   margin-bottom: 30px;
   align-items: flex-end;
+  color: var(#{--text-color-default});
   .today__img{
     width: 119px;
     height: 119px;
@@ -22,7 +23,7 @@
   .today__temp{
     font-size: 96px;
     font-weight: 500;
-    color: $primary_color;
+    color: var(#{--text-color-default});
   }
   .today__title{
     font-size: 40px;

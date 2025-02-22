@@ -1,3 +1,5 @@
+@import "../../styles/variables";
+
 .nav{
   display: flex;
   align-items: center;
@@ -13,7 +15,7 @@
 }
 
 .logo__title{
-  color: #4793FF;
+  color: $primary-color;
   font-size: 25px;
   text-transform: uppercase;
   font-weight: bold;
@@ -24,10 +26,11 @@
   display: flex;
 }
 
-.theme{
+.change__theme{
   width: 35px;
   height: 35px;
   margin-right: 20px;
+  cursor: pointer;
 }
 
 .select{

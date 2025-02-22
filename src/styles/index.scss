@@ -8,6 +8,7 @@
 body{
   font-family: "Montserrat", serif;
   position: relative;
+  background: var(#{--body-background-default});
 }
 
 a{

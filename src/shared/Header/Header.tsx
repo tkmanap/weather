@@ -2,9 +2,17 @@ import React from 'react';
 import {Link} from "react-router";
 import s from './Header.module.scss'
 import logo from '../../assets/image/logo.png'
-import theme from '../../assets/image/theme.svg'
+import {GlobalSvgSelector} from "../../assets/icons/Global/GlobalSvgSelector.tsx";
+import {useTheme} from "../../hooks/useTheme.ts";
+import {Theme} from "../../context/ThemeContext.ts";
 
 const Header: React.FC = () => {
+    const theme = useTheme()
+
+    const changeTheme = () => {
+        theme.changeTheme(theme.theme === Theme.LIGHT ? Theme.DARK : Theme.LIGHT)
+    }
+
     return (
         <div className={s.header}>
             <div className={s.nav}>
@@ -13,7 +21,9 @@ const Header: React.FC = () => {
                     <h2 className={s.logo__title}> React Weather</h2>
                 </Link>
                 <div className={s.nav}>
-                    <img className={s.theme} src={theme} alt="theme"/>
+                    <div className={s.change__theme} onClick={changeTheme}>
+                        <GlobalSvgSelector id="change-theme"/>
+                    </div>
                     <input className={s.select} type="search"/>
                 </div>
             </div>
