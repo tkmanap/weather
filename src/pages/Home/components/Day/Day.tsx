@@ -1,14 +1,18 @@
-import React from "react";
 import s from './Day.module.css'
 import sun from '../../../../assets/image/sun.svg'
+import {Weather} from "../../../../store/types/types.ts";
 
-const Day: React.FC = () => {
+interface DayProps {
+    weather: Weather
+}
+
+
+const Day = ({weather}: DayProps) => {
     return (
         <div className={s.today}>
-
             <div className={s.today__top}>
                 <div className={s.today__top_wrapper}>
-                    <div className={s.today__temp}>20°</div>
+                    <div className={s.today__temp}>{Math.floor(weather.main.temp)}°</div>
                     <div className={s.today__title}>Сегодня</div>
                 </div>
                 <div>
@@ -21,7 +25,7 @@ const Day: React.FC = () => {
                     Время: <span>21:54</span>
                 </div>
                 <div className={s.today__place}>
-                    Город: <span>Санкт-Петербург</span>
+                    Город: <span>{weather.name}</span>
                 </div>
             </div>
         </div>

@@ -1,4 +1,4 @@
-@import "../../styles/variables";
+@use "../../styles/variables" as vars;
 
 .nav{
   display: flex;
@@ -15,7 +15,7 @@
 }
 
 .logo__title{
-  color: $primary-color;
+  color: vars.$primary-color;
   font-size: 25px;
   text-transform: uppercase;
   font-weight: bold;

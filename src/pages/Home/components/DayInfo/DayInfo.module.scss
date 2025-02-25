@@ -1,12 +1,12 @@
-@import '../../../../styles/variables.scss';
+@use '../../../../styles/variables.scss' as vars;
 
 .this__day_info {
   position: relative;
   padding: 40px;
   max-width: 750px;
   width: 100%;
-  box-shadow: $box-shadow;
-  border-radius: $border-radius;
+  box-shadow: vars.$box-shadow;
+  border-radius: vars.$border-radius;
   background: var(#{--components-background-default});
 }
 
@@ -42,7 +42,7 @@
   }
 
   .indicator__name {
-    color: $base-color;
+    color: vars.$base-color;
   }
 
   .indicator__value {
