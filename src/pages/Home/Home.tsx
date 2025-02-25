@@ -9,10 +9,10 @@ import {selectCurrentWeatherData} from "../../store/selector.ts";
 
 export const Home: React.FC = () => {
     const dispatch = useAppDispatch()
-    const {weather, } = useAppSelector(selectCurrentWeatherData)
+    const {weather} = useAppSelector(selectCurrentWeatherData)
 
     useEffect(() => {
-        dispatch(fetchCurrentWeather('paris'));
+        dispatch(fetchCurrentWeather('london'));
     }, [dispatch]);
     return (
         <div className={s.home}>

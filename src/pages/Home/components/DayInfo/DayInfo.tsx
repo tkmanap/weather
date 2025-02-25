@@ -1,6 +1,8 @@
 import React from 'react';
 import s from './DayInfo.module.scss'
 import DayItem from "./DayItem.tsx";
+import {useAppSelector} from "../../../../hooks/store.ts";
+import {selectCurrentWeatherData} from "../../../../store/selector.ts";
 
 
 export interface Item {
@@ -10,26 +12,27 @@ export interface Item {
 }
 
 const DayInfo: React.FC = () => {
+    const {weather} = useAppSelector(selectCurrentWeatherData)
     const items = [
         {
             icon_id: 'temp',
             title: 'Температура',
-            value: '20° - ощущается как 17°'
+            value: `${Math.floor(weather.main.temp)}° - ощущается как ${Math.floor(weather.main.feels_like)}`
         },
         {
             icon_id: 'pressure',
             title: 'Давление ',
-            value: '765 мм ртутного столба - нормальное°'
+            value: `${weather.main.pressure} мбар`
         },
         {
             icon_id: 'precipitation',
             title: 'Осадки',
-            value: 'Без осадков'
+            value: `${weather.rain} мм/ч`
         },
         {
             icon_id: 'wind',
             title: 'Ветер',
-            value: '3 м/с юго-запад - легкий ветер'
+            value: `${weather.wind.speed} м/c`
         }
     ]
 

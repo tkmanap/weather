@@ -1,12 +1,17 @@
+interface WeatherItem {
+    id: number;
+    main: string;
+    description: string;
+    icon: string;
+}
+
 export type Weather = {
     id: number
     name: string
-    weather: {
-        main: string,
-        description: string
-    }
+    weather: WeatherItem[],
     main: {
         temp: number,
+        feels_like: number,
         pressure: number,
         humidity: number,
     },
@@ -20,6 +25,7 @@ export type Weather = {
     },
     clouds: {
         all: number
-    }
+    },
+    timezone: number
 
 }

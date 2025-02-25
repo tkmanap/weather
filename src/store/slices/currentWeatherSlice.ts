@@ -17,12 +17,17 @@ const initialState: CurrentWeather = {
     weather: {
         id: 0,
         name: "",
-        weather: {
-            main: "",
-            description: ""
-        },
+        weather: [
+            {
+                id: 0,
+                main: '',
+                description: 'description',
+                icon: '',
+            }
+        ],
         main: {
             temp: 0,
+            feels_like: 0,
             pressure: 0,
             humidity: 0,
         },
@@ -36,7 +41,8 @@ const initialState: CurrentWeather = {
         },
         clouds: {
             all: 0
-        }
+        },
+        timezone: 0
     },
     isLoading: false,
     responce: {

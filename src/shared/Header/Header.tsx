@@ -18,7 +18,7 @@ const Header: React.FC = () => {
             <div className={s.nav}>
                 <Link className={s.nav_link} to={'/'}>
                     <img className={s.logo__img} src={logo} alt="logo"/>
-                    <h2 className={s.logo__title}> React Weather</h2>
+                    <h2 className={s.logo__title}>Weather</h2>
                 </Link>
                 <div className={s.nav}>
                     <div className={s.change__theme} onClick={changeTheme}>
