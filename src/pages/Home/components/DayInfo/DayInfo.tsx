@@ -27,7 +27,7 @@ const DayInfo: React.FC = () => {
         {
             icon_id: 'precipitation',
             title: 'Осадки',
-            value: `${weather.rain} мм/ч`
+            value: weather.rain?.["1h"] ? `${weather.rain["1h"]} мм/ч` : "Нет осадков"
         },
         {
             icon_id: 'wind',

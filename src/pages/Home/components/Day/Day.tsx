@@ -15,7 +15,6 @@ const Day = ({weather}: DayProps) => {
                     <div className={s.today__temp}>{Math.floor(weather.main.temp)}°</div>
                     <div className={s.today__title}>
                         {weather.weather[0].description}
-
                     </div>
                 </div>
                 <div>
