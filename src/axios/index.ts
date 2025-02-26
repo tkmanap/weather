@@ -9,5 +9,4 @@ api.interceptors.request.use(config => {
         config.url + '&units=metric' + '&appid=' + import.meta.env.VITE_API_KEY
     return config;
 });
-
 export default api

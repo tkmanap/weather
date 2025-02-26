@@ -5,6 +5,7 @@ import logo from '../../assets/image/logo.png'
 import {GlobalSvgSelector} from "../../assets/icons/Global/GlobalSvgSelector.tsx";
 import {useTheme} from "../../hooks/useTheme.ts";
 import {Theme} from "../../context/ThemeContext.ts";
+import SelectCity from "../SelectCity/SelectCity.tsx";
 
 const Header: React.FC = () => {
     const theme = useTheme()
@@ -24,7 +25,7 @@ const Header: React.FC = () => {
                     <div className={s.change__theme} onClick={changeTheme}>
                         <GlobalSvgSelector id="change-theme"/>
                     </div>
-                    <input className={s.select} type="search"/>
+                    <SelectCity/>
                 </div>
             </div>
         </div>
