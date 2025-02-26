@@ -22,7 +22,7 @@ export type Weather = {
         speed: number;
         deg: number;
     };
-    rain: {
+    rain?: {
         "1h": number;
     };
     clouds: {
@@ -42,7 +42,7 @@ export interface ForecastItem {
     rain?: { "3h": number };
 }
 
-export interface ForecastResponse {
+export interface Forecast {
     cod: string;
     message: number;
     cnt: number;

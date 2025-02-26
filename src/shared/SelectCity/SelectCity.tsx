@@ -1,7 +1,9 @@
-import React, {useEffect, useState} from "react";
-import {fetchCurrentWeather} from "../../store/thunks/fetchCurrentWeather.ts";
-import {useAppDispatch} from "../../hooks/store.ts";
 import s from '../Header/Header.module.scss'
+import React, {useEffect, useState} from "react";
+import {useAppDispatch} from "../../hooks/store.ts";
+
+import {fetchCurrentWeather} from "../../store/thunks/fetchCurrentWeather.ts";
+import {fetchForecastWeather} from "../../store/thunks/fetchForecastWeather.ts";
 
 const cities = [
     {value: "Moscow", label: "Москва"},
@@ -19,6 +21,7 @@ const SelectCity = () => {
 
     useEffect(() => {
         dispatch(fetchCurrentWeather(city));
+        dispatch(fetchForecastWeather(city))
     }, [city, dispatch]);
 
     const handleCityChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
