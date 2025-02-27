@@ -15,8 +15,8 @@ export interface MainWeatherData {
 export type Weather = {
     id: number;
     name: string;
+    main: MainWeatherData;
     weather: WeatherItem[];
-    main: MainWeatherData[];
     visibility: number;
     wind: {
         speed: number;
@@ -33,7 +33,7 @@ export type Weather = {
 
 export interface ForecastItem {
     dt: number;
-    main: MainWeatherData[];
+    main: MainWeatherData;
     weather: WeatherItem[];
     clouds: { all: number };
     wind: { speed: number; deg: number };

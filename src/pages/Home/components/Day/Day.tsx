@@ -18,7 +18,8 @@ const Day = ({weather}: DayProps) => {
                     </div>
                 </div>
                 <div>
-                    <img className={s.today__img} src={`https://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`}
+                    <img className={s.today__img}
+                         src={`https://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`}
                          alt="sun"/>
                 </div>
             </div>

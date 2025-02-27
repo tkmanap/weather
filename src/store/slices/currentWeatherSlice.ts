@@ -5,7 +5,7 @@ import {AxiosResponse} from "axios";
 type CurrentWeather = {
     weather: Weather,
     isLoading: boolean,
-    responce: Response
+    response: Response
 }
 
 type Response = {
@@ -45,7 +45,7 @@ const initialState: CurrentWeather = {
         timezone: 0
     },
     isLoading: false,
-    responce: {
+    response: {
         status: 0,
         message: ''
     }
@@ -64,7 +64,7 @@ export const currentWeatherSlice = createSlice({
         ) {
             state.weather = action.payload.data
             state.isLoading = false
-            state.responce = {
+            state.response = {
                 status: action.payload.status,
                 message: action.payload.statusText
             }
@@ -74,7 +74,7 @@ export const currentWeatherSlice = createSlice({
             action: PayloadAction<AxiosResponse<Weather>>
         ) {
             state.isLoading = false
-            state.responce = {
+            state.response = {
                 status: action.payload.status,
                 message: action.payload.statusText
             }

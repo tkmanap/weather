@@ -3,7 +3,7 @@ import {createSlice, PayloadAction} from "@reduxjs/toolkit";
 import {AxiosResponse} from "axios";
 
 type ForecastState = {
-    forecast: Forecast | []
+    forecast: Forecast | null
     isLoading: boolean
     response: Response
 }
@@ -15,25 +15,34 @@ type Response = {
 
 const initialState: ForecastState = {
     forecast: {
-        cod: 0,
+        cod: '',
         message: 0,
         cnt: 0,
         list: [
             {
                 dt: 0,
-                main: { temp: 0, feels_like: 0, pressure: 0, humidity: 0 },
-                weather: [{ id: 0, main: 'main-temp', description: 'descr', icon: 'weather-icon' }],
-                clouds: { all: 0 },
-                wind: { speed: 0, deg: 0 },
+                main: {temp: 0, feels_like: 0, pressure: 0, humidity: 0},
+                weather: [{id: 0, main: 'main-temp', description: 'descr', icon: 'weather-icon'}],
+                clouds: {all: 0},
+                wind: {speed: 0, deg: 0},
                 visibility: 0,
+                pop: 0
             }
         ],
         city: {
             id: 0,
             name: '',
             country: '',
-            timezone: ''
-        }
+            timezone: 0,
+            population: 0,
+            sunrise: 0,
+            sunset: 0
+        },
+    },
+    isLoading: false,
+    response: {
+        status: 0,
+        message: ''
     }
 }
 
